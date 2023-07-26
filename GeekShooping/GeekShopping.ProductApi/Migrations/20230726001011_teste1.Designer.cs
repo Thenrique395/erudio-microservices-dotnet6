@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GeekShopping.ProductApi.Migrations
 {
     [DbContext(typeof(MyContext))]
-    [Migration("20230725181210_teste")]
-    partial class teste
+    [Migration("20230726001011_teste1")]
+    partial class teste1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -62,6 +62,26 @@ namespace GeekShopping.ProductApi.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("product");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1L,
+                            CategoryName = "Leao",
+                            Description = "Leao",
+                            ImageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDBJIKnU6BAEI8JEaCnpmAli0fW1-Q2OLA0eUp6ZNzzA&s",
+                            Name = "Leao",
+                            Price = 100m
+                        },
+                        new
+                        {
+                            Id = 2L,
+                            CategoryName = "Predios",
+                            Description = "Predios",
+                            ImageUrl = "https://www.pontotel.com.br/wp-content/uploads/2022/05/imagem-corporativa.jpg",
+                            Name = "Predios",
+                            Price = 300m
+                        });
                 });
 #pragma warning restore 612, 618
         }
