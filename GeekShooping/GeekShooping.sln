@@ -7,9 +7,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrontEnd", "FrontEnd", "{5B
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{EFD494B8-BA73-451B-B0DC-B9E06C1A15A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekShopping.Web", "GeekShopping.Web\GeekShopping.Web.csproj", "{0170CD6B-51A6-438F-B8F2-BA043841DB58}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeekShopping.Web", "GeekShopping.Web\GeekShopping.Web.csproj", "{0170CD6B-51A6-438F-B8F2-BA043841DB58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekShopping.ProductApi", "GeekShopping.ProductApi\GeekShopping.ProductApi.csproj", "{7B298EC0-DFEC-4081-BB48-173CAE566D63}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeekShopping.ProductApi", "GeekShopping.ProductApi\GeekShopping.ProductApi.csproj", "{7B298EC0-DFEC-4081-BB48-173CAE566D63}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

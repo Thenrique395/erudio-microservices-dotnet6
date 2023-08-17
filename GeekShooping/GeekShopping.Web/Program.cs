@@ -1,29 +1,21 @@
-using GeekShopping.Web.Services.IServices;
 
-var builder = WebApplication.CreateBuilder(args);
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Hosting;
 
-// Add services to the container.
-builder.Services.AddControllersWithViews();
-
-builder.Services.AddMvc();
-builder.Services.AddHttpClient<IProductService, IProductService>(
-    config => config.BaseAddress = new Uri(builder.Configuration["serveUrls:ProductAPI"]));
-
-var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
+namespace GeekShopping.Web
 {
-    app.UseExceptionHandler("/Home/Error");
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            CreateHostBuilder(args).Build().Run();
+        }
+
+        public static IHostBuilder CreateHostBuilder(string[] args) =>
+            Host.CreateDefaultBuilder(args)
+                .ConfigureWebHostDefaults(webBuilder =>
+                {
+                    webBuilder.UseStartup<Startup>();
+                });
+    }
 }
-app.UseStaticFiles();
-
-app.UseRouting();
-
-app.UseAuthorization();
-
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
-
-app.Run();
