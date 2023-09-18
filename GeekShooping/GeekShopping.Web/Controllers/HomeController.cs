@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -15,15 +16,16 @@ namespace GeekShopping.Web.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly IProductService _productService;
-        private readonly ICartService _cartService;
+        //private readonly ICartService _cartService;
 
         public HomeController(ILogger<HomeController> logger,
-            IProductService productService,
-            ICartService cartService)
+            IProductService productService
+            //ICartService cartService
+            )
         {
             _logger = logger;
             _productService = productService;
-            _cartService = cartService;
+            //_cartService = cartService;
         }
 
         public async Task<IActionResult> Index()
@@ -66,11 +68,11 @@ namespace GeekShopping.Web.Controllers
             cartDetails.Add(cartDetail);
             cart.CartDetails = cartDetails;
 
-            var response = await _cartService.AddItemToCart(cart, token);
-            if (response != null)
-            {
-                return RedirectToAction(nameof(Index));
-            }
+            //var response = await _cartService.AddItemToCart(cart, token);
+            //if(response != null)
+            //{
+            //    return RedirectToAction(nameof(Index));
+            //}
             return View(model);
         }
 

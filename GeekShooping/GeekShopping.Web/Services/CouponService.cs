@@ -1,11 +1,13 @@
 ﻿using GeekShopping.Web.Models;
 using GeekShopping.Web.Services.IServices;
-using GeekShopping.Web.Utils;
-using System.Net.Http.Headers;
-using System.Net;
 using System;
-using System.Threading.Tasks;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.Http.Headers;
 using System.Net.Http;
+using System.Threading.Tasks;
+using GeekShopping.Web.Utils;
+using System.Net;
 
 namespace GeekShopping.Web.Services
 {

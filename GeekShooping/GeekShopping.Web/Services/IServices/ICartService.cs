@@ -15,5 +15,5 @@ namespace GeekShopping.Web.Services.IServices
         Task<bool> ClearCart(string userId, string token);
 
         Task<object> Checkout(CartHeaderViewModel cartHeader, string token);
-    }
+     }
 }
