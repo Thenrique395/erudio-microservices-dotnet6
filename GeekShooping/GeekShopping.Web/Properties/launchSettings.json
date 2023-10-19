@@ -1,12 +1,24 @@
 {
+
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:13466",
+      "sslPort": 4430
+    }
+  },
   "profiles": {
     "GeekShopping.Web": {
       "commandName": "Project",
+      "dotnetRunMessages": true,
       "launchBrowser": true,
+      "applicationUrl": "https://localhost:4431;http://localhost:4432",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
-      },
-      "applicationUrl": "https://localhost:60130;http://localhost:60132"
+
+      }
     }
   }
 }
